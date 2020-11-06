@@ -21,7 +21,7 @@ namespace TechJobsOO
         // TODO: Add custom Equals(), GetHashCode(), and ToString() methods.
         public override string ToString()
         {
-            return value;
+            return Value;
         }
 
         public override bool Equals(object obj)
