@@ -28,6 +28,38 @@ namespace TechJobsOO
             JobCoreCompetency = coreCompetency;
         }
 
+        public override string ToString()
+        {
+            if (Name == "" & EmployerName.Value == "" & EmployerLocation.Value == "" & JobType.Value == "" & JobCoreCompetency.Value == "")
+            {
+                return "OOPS! This job does not seem to exist.";
+            }
+            else if (Name == "")
+            {
+                Name = "Data not available";
+            }
+            else if (EmployerName.Value == "")
+            {
+                EmployerName.Value = "Data not available";
+            }
+            else if (EmployerLocation.Value == "")
+            {
+                EmployerLocation.Value = "Data not available";
+            }
+            else if (JobType.Value == "")
+            {
+                JobType.Value = "Data not available";
+            }
+            else if (JobCoreCompetency.Value == "")
+            {
+                JobCoreCompetency.Value = "Data not available";
+            }
+            return $"\nID: {Id}\nName: {Name}\nEmployer: {EmployerName}" +
+                    $"\nLocation: {EmployerLocation}\nPosition Type: {JobType}" +
+                    $"\nCore Competency: {JobCoreCompetency}\n";
+
+        }
+
         // TODO: Generate Equals() and GetHashCode() methods.
         public override bool Equals(object obj)
         {
